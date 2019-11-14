@@ -1,0 +1,3 @@
+customer_io_webhook:
+    path: /webhook
+    controller: SymfonyLabCustomerIOBundle:Webhook:post

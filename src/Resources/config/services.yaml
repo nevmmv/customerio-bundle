@@ -1,0 +1,19 @@
+parameters:
+  symfonylab_customer_io.tracker.class: SymfonyLab\CustomerIOBundle\Tracking\EventTracker
+services:
+  symfonylab_customer_io.request:
+    class: Customerio\Request
+    public: false
+
+  symfonylab_customer_io.api:
+    class: Customerio\Api
+    arguments:
+      - '%customer_io.site_id%'
+      - '%customer_io.api_key%'
+      - '@symfonylab_customer_io.request'
+
+  symfonylab_customer_io.tracker:
+    class: '%symfonylab_customer_io.tracker.class%'
+    arguments:
+      - '@symfonylab_customer_io.api'
+    tags: ['kernel.event_subscriber']

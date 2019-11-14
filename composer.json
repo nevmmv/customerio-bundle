@@ -1,0 +1,36 @@
+{
+    "name": "symfonylab/customerio-bundle",
+    "description": "Integrates customer.io into Symfony",
+    "type": "symfony-bundle",
+    "keywords": [
+        "symfony",
+        "customer.io",
+        "customer retention"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3",
+        "ext-json": "*",
+        "symfony/framework-bundle": "4.3.*",
+        "symfony/monolog-bundle": "^3.4",
+        "userscape/customerio": "^2.1",
+        "symfony-bundles/json-request-bundle": "^2.0"
+    },
+    "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.2",
+        "symfony/maker-bundle": "^1.13",
+        "symfony/phpunit-bridge": "^4.3",
+        "symfony/profiler-pack": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SymfonyLab\\CustomerIOBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SymfonyLab\\CustomerIOBundle\\": "src/",
+            "SymfonyLab\\Tests\\": "tests/"
+        }
+    }
+}
