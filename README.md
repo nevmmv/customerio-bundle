@@ -1,8 +1,8 @@
 # customer.io bundle
 
-[![Build Status](https://travis-ci.org/nevmmv/customerio-bundle.svg?branch=master)](https://travis-ci.org/nevmmv/customerio-bundle)
+[![Build Status](https://travis-ci.org/symfonylab/customerio-bundle.svg?branch=master)](https://travis-ci.org/symfonylab/customerio-bundle)
 
-[![Latest Stable Version](https://poser.pugx.org/nevmmv/customerio-bundle/v/stable.svg)](https://packagist.org/packages/nevmmv/customerio-bundle) [![Total Downloads](https://poser.pugx.org/nevmmv/customerio-bundle/downloads.svg)](https://packagist.org/packages/nevmmv/customerio-bundle) [![License](https://poser.pugx.org/nevmmv/customerio-bundle/license.svg)](https://packagist.org/packages/nevmmv/customerio-bundle)
+[![Latest Stable Version](https://poser.pugx.org/symfonylab/customerio-bundle/v/stable.svg)](https://packagist.org/packages/symfonylab/customerio-bundle) [![Total Downloads](https://poser.pugx.org/symfonylab/customerio-bundle/downloads.svg)](https://packagist.org/packages/symfonylab/customerio-bundle) [![License](https://poser.pugx.org/symfonylab/customerio-bundle/license.svg)](https://packagist.org/packages/symfonylab/customerio-bundle)
 
 
 
