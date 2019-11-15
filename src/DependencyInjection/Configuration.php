@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('symfonylab_customer_io');
+        $treeBuilder = new TreeBuilder('symfony_lab_customer_io');
         $rootNode = $treeBuilder->getRootNode();
 
         $rootNode
