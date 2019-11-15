@@ -21,7 +21,7 @@ class WebhookController extends AbstractController
      * @param LoggerInterface $logger
      * @return Response
      */
-    public function post(Request $request, LoggerInterface $logger, EventDispatcherInterface $eventDispatcher)
+    public function postAction(Request $request, LoggerInterface $logger, EventDispatcherInterface $eventDispatcher)
     {
         $eventData = $request->request->all();
         $type = WebhookEvent::getName($eventData['event_type']);

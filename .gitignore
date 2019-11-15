@@ -1,4 +1,6 @@
-*.imlgit remote add origin git@github.com:nevmmv/customerio-bundle.git
+*.iml
 vendor/
 /composer.phar
 composer.lock
+/var/
+/tests/var/

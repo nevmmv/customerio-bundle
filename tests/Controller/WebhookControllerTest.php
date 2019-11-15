@@ -41,7 +41,7 @@ BODY;
 
         $client->request(
                 'POST',
-                '/__symfonylab/customerio',
+                '/webhook',
                 array(),
                 array(),
                 array('CONTENT_TYPE' => 'application/json'),
@@ -49,7 +49,8 @@ BODY;
         );
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertTrue($triggeredHooks['customerio.email_delivered']);
+        $this->assertArrayHasKey(WebhookEvent::EMAIL_DELIVERED, $triggeredHooks);
+        $this->assertTrue($triggeredHooks[WebhookEvent::EMAIL_DELIVERED]);
 
     }
 }

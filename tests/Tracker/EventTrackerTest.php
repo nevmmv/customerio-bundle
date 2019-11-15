@@ -3,6 +3,8 @@
 
 namespace SymfonyLab\Tests\Tracker;
 
+use Customerio\Api;
+use Customerio\Response;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use SymfonyLab\CustomerIOBundle\Event\ActionEvent;
@@ -20,9 +22,9 @@ class EventTrackerTest extends WebTestCase
         static::$kernel = static::createKernel();
         static::$kernel->boot();
 
-        $api = $this->getMockBuilder('\Customerio\Api')->disableOriginalConstructor()->getMock();
+        $api = $this->getMockBuilder(Api::class)->disableOriginalConstructor()->getMock();
 
-        $response = $this->getMockBuilder('\Customerio\Response')->disableOriginalConstructor()->getMock();
+        $response = $this->getMockBuilder(Response::class)->disableOriginalConstructor()->getMock();
 
         $response->expects($this->once())->method('success')->willReturn(true);
         $api->expects($this->once())->method('createCustomer')->willReturn($response);
@@ -49,9 +51,9 @@ class EventTrackerTest extends WebTestCase
         static::$kernel = static::createKernel();
         static::$kernel->boot();
 
-        $api = $this->getMockBuilder('\Customerio\Api')->disableOriginalConstructor()->getMock();
+        $api = $this->getMockBuilder(Api::class)->disableOriginalConstructor()->getMock();
 
-        $response = $this->getMockBuilder('\Customerio\Response')->disableOriginalConstructor()->getMock();
+        $response = $this->getMockBuilder(Response::class)->disableOriginalConstructor()->getMock();
 
         $response->expects($this->once())->method('success')->willReturn(false);
         $api->expects($this->once())->method('createCustomer')->willReturn($response);
@@ -75,9 +77,9 @@ class EventTrackerTest extends WebTestCase
         static::$kernel = static::createKernel();
         static::$kernel->boot();
 
-        $api = $this->getMockBuilder('\Customerio\Api')->disableOriginalConstructor()->getMock();
+        $api = $this->getMockBuilder(Api::class)->disableOriginalConstructor()->getMock();
 
-        $response = $this->getMockBuilder('\Customerio\Response')->disableOriginalConstructor()->getMock();
+        $response = $this->getMockBuilder(Response::class)->disableOriginalConstructor()->getMock();
 
         $response->expects($this->once())->method('success')->willReturn(true);
         $api->expects($this->once())->method('fireEvent')->willReturn($response);

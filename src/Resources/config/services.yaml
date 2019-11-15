@@ -1,6 +1,23 @@
 parameters:
   symfonylab_customer_io.tracker.class: SymfonyLab\CustomerIOBundle\Tracking\EventTracker
 services:
+  # default configuration for services in *this* file
+  _defaults:
+    autowire: false      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+  # makes classes in src/ available to be used as services
+  # this creates a service per class whose id is the fully-qualified class name
+  SymfonyLab\CustomerIOBundle\:
+    resource: '../../*'
+    exclude: '../../{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+
+  # controllers are imported separately to make sure services can be injected
+  # as action arguments even if you don't extend any base controller class
+  SymfonyLab\CustomerIOBundle\Controller\:
+    resource: '../../Controller'
+    tags: ['controller.service_arguments']
+
   symfonylab_customer_io.request:
     class: Customerio\Request
     public: false
