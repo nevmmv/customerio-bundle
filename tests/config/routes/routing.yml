@@ -1,0 +1,2 @@
+customerio_hooks:
+    resource: "@SymfonyLabCustomerIOBundle/Resources/config/routing.yaml"

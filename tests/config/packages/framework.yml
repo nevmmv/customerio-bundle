@@ -1,0 +1,4 @@
+framework:
+  test: ~
+  secret:          secret
+  router:          { resource: "%kernel.root_dir%/routing.yml" }
